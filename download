@@ -1,0 +1,3 @@
+data/waitlist.csv
+__pycache__/
+.env

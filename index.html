@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kinetiq is an AI automation service that turns plain-English requests into real business workflows." />
+  <title>Kinetiq — Tell AI what to do. We build the workflow.</title>
+  <style>
+    :root{--bg:#071018;--panel:#0d1721;--panel2:#101d29;--text:#edf5f2;--muted:#9ab0ab;--line:rgba(255,255,255,.09);--accent:#86f7c5;--accent2:#baf7ff;--danger:#ff8a8a;--shadow:0 30px 80px rgba(0,0,0,.35)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(1200px 600px at 70% -10%,rgba(109,255,199,.13),transparent 55%),radial-gradient(900px 500px at 10% 20%,rgba(110,210,255,.09),transparent 60%),var(--bg);color:var(--text);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{max-width:1150px;margin:auto;padding:0 24px}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:-.03em}.mark{width:31px;height:31px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#071018;font-weight:900}.navlinks{display:flex;gap:26px;color:var(--muted);font-size:14px}.btn{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);color:var(--text);padding:12px 16px;border-radius:12px;font-weight:700;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}.btn.primary{background:var(--accent);color:#071018;border-color:var(--accent);box-shadow:0 12px 35px rgba(134,247,197,.18)}
+    .hero{padding:76px 0 64px}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(134,247,197,.1)}h1{font-size:clamp(46px,7vw,78px);line-height:.98;letter-spacing:-.06em;margin:18px 0 18px}h1 span{background:linear-gradient(90deg,var(--text),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:18px;color:var(--muted);max-width:630px}.heroBtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.proof{display:flex;gap:22px;flex-wrap:wrap;margin-top:26px;color:#c8d6d2;font-size:13px}.proof b{color:var(--text)}
+    .demo{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:var(--shadow);position:relative;overflow:hidden}.demo:before{content:"";position:absolute;inset:-30% 30% auto -20%;height:220px;background:radial-gradient(circle,rgba(134,247,197,.16),transparent 65%);pointer-events:none}.window{border:1px solid var(--line);background:#081118;border-radius:18px;overflow:hidden}.windowHead{padding:12px 14px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px}.lights{display:flex;gap:6px}.light{width:8px;height:8px;border-radius:50%;background:#345}.body{padding:22px}.prompt{font-size:14px;color:#cbd9d6}.prompt strong{color:var(--accent)}.flow{margin-top:22px;display:grid;gap:10px}.step{display:flex;align-items:center;gap:11px;padding:12px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.03)}.icon{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:rgba(134,247,197,.12);color:var(--accent);font-weight:900}.step small{display:block;color:var(--muted);margin-top:2px}
+    section{padding:72px 0}.sectionTop{max-width:720px;margin-bottom:28px}.kicker{color:var(--accent);font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:800}.sectionTop h2{font-size:clamp(32px,4vw,52px);line-height:1.02;letter-spacing:-.04em;margin:10px 0}.sectionTop p{color:var(--muted);font-size:17px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:20px;padding:24px;min-height:220px}.card h3{margin:15px 0 8px;font-size:21px}.card p{margin:0;color:var(--muted)}.num{font-size:12px;color:var(--accent);font-weight:900;letter-spacing:.08em}.usecase{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.pill{font-size:12px;color:#c9d8d4;border:1px solid var(--line);padding:7px 9px;border-radius:999px;background:rgba(255,255,255,.025)}
+    .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:start}.steps{display:grid;gap:13px}.stepBig{display:grid;grid-template-columns:44px 1fr;gap:15px}.stepBig .badge{width:44px;height:44px;border:1px solid var(--line);border-radius:13px;display:grid;place-items:center;color:var(--accent);font-weight:900}.stepBig h3{margin:3px 0 4px}.stepBig p{margin:0;color:var(--muted)}
+    .wait{background:linear-gradient(180deg,rgba(134,247,197,.1),rgba(134,247,197,.03));border:1px solid rgba(134,247,197,.18);border-radius:28px;padding:34px}.waitGrid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.form{display:grid;gap:11px}.input{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:#071018;color:var(--text);outline:none}.input:focus{border-color:rgba(134,247,197,.55);box-shadow:0 0 0 4px rgba(134,247,197,.08)}textarea.input{min-height:105px;resize:vertical}.fine{font-size:12px;color:var(--muted)}.status{min-height:20px;font-size:13px;color:var(--muted)}.status.ok{color:var(--accent)}.status.err{color:var(--danger)}
+    footer{padding:28px 0 48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;gap:15px;align-items:center}.tiny{max-width:650px}
+    @media(max-width:900px){.heroGrid,.split,.waitGrid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.navlinks{display:none}.hero{padding-top:52px}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#top"><span class="mark">K</span><span>Kinetiq</span></a>
+    <nav class="navlinks"><a href="#how">How it works</a><a href="#usecases">Use cases</a><a href="#waitlist">Early access</a></nav>
+    <a class="btn primary" href="#waitlist">Join waitlist</a>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="heroGrid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> AI automation for real work</div>
+          <h1>Tell us what you want done.<br><span>We build the workflow.</span></h1>
+          <p class="lead">Kinetiq turns plain-English requests into practical AI automations — lead follow-up, customer support, reports, research, document processing, and custom workflows.</p>
+          <div class="heroBtns"><a class="btn primary" href="#waitlist">Get early access</a><a class="btn" href="#how">See how it works</a></div>
+          <div class="proof"><span>✓ <b>No-code friendly</b></span><span>✓ <b>Human approval when needed</b></span><span>✓ <b>Built around your tools</b></span></div>
+        </div>
+        <div class="demo">
+          <div class="window">
+            <div class="windowHead"><span class="lights"><i class="light"></i><i class="light"></i><i class="light"></i></span><span>kinetiq / automation</span><span>LIVE</span></div>
+            <div class="body">
+              <div class="prompt">“Every time someone fills our website form, <strong>qualify the lead, draft a reply, update our CRM, and alert the right person.</strong>”</div>
+              <div class="flow">
+                <div class="step"><div class="icon">1</div><div><b>Capture</b><small>New website form received</small></div></div>
+                <div class="step"><div class="icon">2</div><div><b>Understand</b><small>AI classifies intent + urgency</small></div></div>
+                <div class="step"><div class="icon">3</div><div><b>Act</b><small>CRM updated + reply drafted</small></div></div>
+                <div class="step"><div class="icon">4</div><div><b>Escalate</b><small>Human approval for sensitive actions</small></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="usecases">
+      <div class="wrap">
+        <div class="sectionTop"><div class="kicker">What we automate</div><h2>One service. Almost any repeatable workflow.</h2><p>Start with one annoying process. We map it, design the automation, connect the right tools, and keep the important human decisions in the loop.</p></div>
+        <div class="cards">
+          <article class="card"><div class="num">01 / SALES</div><h3>Lead capture & follow-up</h3><p>Qualify new leads, enrich details, update your CRM, draft responses, and trigger follow-ups.</p><div class="usecase"><span class="pill">Forms</span><span class="pill">CRM</span><span class="pill">Email</span><span class="pill">Calendar</span></div></article>
+          <article class="card"><div class="num">02 / OPERATIONS</div><h3>Admin & reporting</h3><p>Move information between systems, process documents, summarize activity, and generate recurring reports.</p><div class="usecase"><span class="pill">Sheets</span><span class="pill">Docs</span><span class="pill">PDFs</span><span class="pill">Dashboards</span></div></article>
+          <article class="card"><div class="num">03 / SUPPORT</div><h3>Customer operations</h3><p>Answer routine questions, triage requests, create tickets, schedule actions, and hand off exceptions.</p><div class="usecase"><span class="pill">Chat</span><span class="pill">Email</span><span class="pill">Tickets</span><span class="pill">FAQ</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap split">
+        <div class="sectionTop"><div class="kicker">How it works</div><h2>From “I wish this was automatic” to a working system.</h2><p>We make the first automation small enough to launch, useful enough to matter, and structured enough to expand.</p></div>
+        <div class="steps">
+          <div class="stepBig"><div class="badge">01</div><div><h3>Describe the task</h3><p>Tell us what happens today, what should happen instead, and what tools you already use.</p></div></div>
+          <div class="stepBig"><div class="badge">02</div><div><h3>Map the workflow</h3><p>We break the process into triggers, AI decisions, tool actions, approvals, and fallbacks.</p></div></div>
+          <div class="stepBig"><div class="badge">03</div><div><h3>Build & test</h3><p>We connect the systems, test normal and edge cases, and make exceptions visible rather than silent.</p></div></div>
+          <div class="stepBig"><div class="badge">04</div><div><h3>Launch & improve</h3><p>Once live, we measure what the automation is doing and refine it around real usage.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="waitlist">
+      <div class="wrap">
+        <div class="wait">
+          <div class="waitGrid">
+            <div>
+              <div class="kicker">Private beta</div>
+              <h2 style="font-size:42px;line-height:1.02;letter-spacing:-.04em;margin:10px 0 12px">Be first to automate the work you hate doing.</h2>
+              <p style="color:var(--muted);margin:0 0 18px">Join the early-access list and tell us one workflow you want to automate. Early users help shape what Kinetiq builds first.</p>
+              <div class="usecase"><span class="pill">No credit card</span><span class="pill">Early access</span><span class="pill">Founder feedback</span></div>
+            </div>
+            <form id="waitlistForm" class="form">
+              <input class="input" name="name" placeholder="Your name" autocomplete="name" maxlength="80" required />
+              <input class="input" type="email" name="email" placeholder="you@company.com" autocomplete="email" maxlength="160" required />
+              <input class="input" name="company" placeholder="Company (optional)" maxlength="120" />
+              <textarea class="input" name="workflow" placeholder="What would you like to automate?" maxlength="800" required></textarea>
+              <button class="btn primary" type="submit">Join the waitlist →</button>
+              <div id="status" class="status" aria-live="polite"></div>
+              <div class="fine">We only need these details to contact you about Kinetiq early access. Don’t submit passwords, payment details, or confidential documents.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap foot"><div class="tiny">© 2026 Kinetiq. Independent AI automation service. Kinetiq is not affiliated with or endorsed by OpenAI.</div><div><a href="#waitlist">Join waitlist</a></div></div></footer>
+  <script>
+    const form = document.getElementById('waitlistForm');
+    const status = document.getElementById('status');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); status.className='status'; status.textContent='Joining…';
+      const data = Object.fromEntries(new FormData(form).entries());
+      try {
+        const res = await fetch('/api/waitlist', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
+        const body = await res.json();
+        if (!res.ok) throw new Error(body.error || 'Something went wrong');
+        status.className='status ok'; status.textContent='You’re on the list. We’ll be in touch.'; form.reset();
+      } catch (err) {
+        status.className='status err'; status.textContent=err.message || 'Could not join the waitlist.';
+      }
+    });
+  </script>
+</body>
+</html>
